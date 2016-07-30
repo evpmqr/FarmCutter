@@ -18,7 +18,7 @@ import org.tbot.util.Condition;
  */
 public class CutTree extends ChildNode {
     private CutTask cutTask;
-    private int random = Random.nextInt(1,2);
+    private int random = Random.nextInt(1, 2);
 
     public CutTree(CutTask cutTask) {
         this.cutTask = cutTask;
@@ -28,7 +28,7 @@ public class CutTree extends ChildNode {
     public void execute() {
         DropItems.drop = false;
         if (!isChopping()) {
-            if (random == 1){
+            if (random == 1) {
                 FGameObjects.getNearest(cutTask.getTreeName()).inRadius(cutTask.getTile(), 10).interact("Chop down");
                 Time.sleepUntil(new Condition() {
                     @Override
@@ -36,8 +36,8 @@ public class CutTree extends ChildNode {
                         return isChopping();
                     }
                 }, 2000);
-                random = Random.nextInt(1,2);
-            }else{
+                random = Random.nextInt(1, 2);
+            } else {
                 FGameObjects.getNearest(cutTask.getTreeName()).inRadius(cutTask.getTile(), 10).click();
                 Time.sleepUntil(new Condition() {
                     @Override
@@ -45,11 +45,12 @@ public class CutTree extends ChildNode {
                         return isChopping();
                     }
                 }, 2000);
-                random = Random.nextInt(1,2);
+                random = Random.nextInt(1, 2);
             }
         }
     }
-    private boolean isChopping(){
+
+    private boolean isChopping() {
         int ani = Players.getLocal().getAnimation();
         return ani == 879 || ani == 867;
     }

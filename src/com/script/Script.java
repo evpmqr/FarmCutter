@@ -12,7 +12,7 @@ import org.tbot.internal.ScriptCategory;
 /**
  * Created by Eric Vue on 7/29/2016.
  */
-@Manifest(version = 1, name = "WoodCutter", description = "", category = ScriptCategory.MINIGAMES, openSource = false, authors = "Horror")
+@Manifest(version = 1.01, name = "WoodCutter", description = "", category = ScriptCategory.MINIGAMES, openSource = false, authors = "Horror")
 public class Script extends FrcScript {
     @Override
     public void initNodes(BaseNode nodeTree) {

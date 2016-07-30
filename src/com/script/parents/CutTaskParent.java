@@ -18,7 +18,7 @@ public class CutTaskParent extends ParentNode {
                 new CutTree(new CutTask("Tree", getRandom(Constants.LOG_TILES), 1, 15)),
                 new CutTree(new CutTask("Oak", getRandom(Constants.OAK_LOGS), 15, 30)),
                 new CutTree(new CutTask("Willow", getRandom(Constants.WILLOW_LOGS), 30, 60)),
-                new CutTree(new CutTask("Yew", getRandom(Constants.YEW_LOGS),60))
+                new CutTree(new CutTask("Yew", getRandom(Constants.YEW_LOGS), 60))
         );
     }
 
